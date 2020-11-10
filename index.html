@@ -137,18 +137,27 @@
           </div>
         </div>
         <div class="contact-form">
-          <form action="">
+          <form
+            action="https://submit-form.com/Ba2vJ9x9"
+            target="_self"
+            id="form"
+          >
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://readers-dais.herokuapp.com/html/thanks.html"
+            />
             <h2>Send Message</h2>
             <div class="inputBox">
-              <input type="text" name="name" required />
+              <input type="text" name="name" required id="name" />
               <span>Full Name</span>
             </div>
             <div class="inputBox">
-              <input type="email" name="email" required />
+              <input type="email" name="email" required id="email" />
               <span>Email</span>
             </div>
             <div class="inputBox">
-              <textarea name="message"></textarea>
+              <textarea name="message" id="message"></textarea>
               <span>Your Message...</span>
             </div>
             <div class="inputBox">
@@ -172,6 +181,14 @@
           } else {
             $(".nav").css("background", "transparent");
           }
+        });
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let message = document.querySelector("#message").value;
+        document.querySelector("#form").addEventListener("submit", function () {
+          name = "";
+          email = "";
+          message = "";
         });
       });
     </script>
