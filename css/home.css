@@ -1,0 +1,408 @@
+*,
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  background: var(--clr-accent, black);
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  border-radius: 0.25em;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5, calc(5vw + 1rem), 4rem);
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 100px;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+
+.nav .logo {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.hero {
+  color: #fff;
+  text-align: center;
+  padding: 15em 0;
+  background-image: url("https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg"), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1;
+}
+
+.featured__item:hover, .featured__item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured__item:hover .featured__details, .featured__item:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 2em white;
+}
+
+.featured__details {
+  opacity: 0;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.product {
+  padding: 3em 2em;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.product__title {
+  font-size: clamp(3rem, calc(5vw + 1rem), 5rem);
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+  margin: -5em 0 0 0;
+}
+
+@media screen and (min-width: 45em) {
+  .product {
+    text-align: left;
+  }
+  .product__title {
+    margin: 0;
+  }
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: circle(60%);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+}
+
+.book-red {
+  background: radial-gradient(#6dd5ed, #2193b0);
+  color: #fff;
+}
+
+.book-white {
+  background: radial-gradient(#fce4b3, #eac886);
+}
+
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg"), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+
+footer .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+footer .container .contact-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .container .contact-info .box {
+  position: relative;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container .contact-info .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+footer .container .contact-info .box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+}
+
+footer .container .contact-info .box .text h3 {
+  font-weight: 500;
+  color: #faa700;
+}
+
+.contact-form {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contact-form h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contact-form .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .inputBox input,
+.contact-form .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  color: #666;
+}
+
+.contact-form .inputBox input:focus ~ span,
+.contact-form .inputBox input:valid ~ span,
+.contact-form .inputBox textarea:focus ~ span {
+  color: #faa700;
+  font-size: 12px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.contact-form .inputBox input[type="submit"] {
+  width: 100px;
+  background: #faa700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .nav .logo {
+    font-size: 16px;
+  }
+  footer.contact {
+    padding: 50px;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container .contact-info {
+    margin-bottom: 40px;
+  }
+  footer .container .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=home.css.map */
