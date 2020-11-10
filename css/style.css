@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .banner {
@@ -214,6 +215,24 @@ section.prologue h2 {
   font-size: 30px;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgb(33, 33, 131);
+  color: #fff;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .social a i {
+  padding: 8px;
+}
+
 @media screen and (max-width: 991px) {
   header {
     padding: 20px 40px;
@@ -251,6 +270,9 @@ section.prologue h2 {
     margin-top: 20px;
   }
   section.prologue {
+    flex-direction: column;
+  }
+  footer {
     flex-direction: column;
   }
 }

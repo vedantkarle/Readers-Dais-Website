@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/pravasi.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>Readers Dais | प्रवासी</title>
   </head>
   <body>
     <section class="banner">
@@ -25,7 +30,7 @@
             फरक एवढाच की माझा प्रवास लांबचा होता, <br />
             पण नकळत कधी माझी गाडीतून उतरायची वेळ आली कळलंच नाही
           </p>
-          <a href="#">Read More</a>
+          <a href="#about">Read More</a>
         </div>
         <div class="imgBx">
           <img src="../images/pravasi.jpg" alt="" height="550px" />
@@ -35,7 +40,7 @@
         <li><a href="../index.html">Home</a></li>
       </ul>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <h3>पाहिलं प्रेम</h3>
       <p>
         प्रत्येकाला आपल्या आयुष्यात पहिल्या प्रेमाचा अनुभव येतो. कित्येकदा पहिले
@@ -65,7 +70,13 @@
         असू,<br />
         जशी आपल्याला 'ती' आठवली
       </p>
-      <a href="#">Buy Now</a>
+      <a
+        data-testid="linkElement"
+        href="https://rzp.io/l/lLmKujvcgj"
+        target="_blank"
+        rel="nofollow noopener"
+        ><span class="_3fUtn">BUY NOW</span></a
+      >
     </section>
     <section class="prologue">
       <div class="image">
@@ -97,6 +108,16 @@
         </p>
       </div>
     </section>
+    <footer>
+      <h3>Review Pravasi On</h3>
+
+      <div class="social">
+        <a href="mailto:workforpravasi@gmail.com">workforpravasi@gmail.com</a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-linkedin-square"></i></a>
+      </div>
+    </footer>
     <script type="text/javascript">
       function toggle() {
         const toggle = document.querySelector(".toggle");
