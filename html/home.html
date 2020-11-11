@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Readers Dais | प्रवासी</title>
   </head>
@@ -22,7 +23,7 @@
         <div class="toggle" onclick="toggle()"></div>
       </header>
       <div class="content">
-        <div class="contentBx">
+        <div class="contentBx" data-aos="fade-right">
           <h2>“प्रवासी”</h2>
           <p>
             प्रेमाच्या प्रवासात अनेकांसारखच मी ही ठरलो फक्तं "प्रवासी"
@@ -32,7 +33,7 @@
           </p>
           <a href="#about">Read More</a>
         </div>
-        <div class="imgBx">
+        <div class="imgBx" data-aos="fade-left">
           <img src="../images/pravasi.jpg" alt="" height="550px" />
         </div>
       </div>
@@ -42,7 +43,7 @@
     </section>
     <section class="about" id="about">
       <h3>पाहिलं प्रेम</h3>
-      <p>
+      <p data-aos="fade-up">
         प्रत्येकाला आपल्या आयुष्यात पहिल्या प्रेमाचा अनुभव येतो. कित्येकदा पहिले
         प्रेम हे व्यक्त केले जाते, पण खूप वेळा ते अव्यक्तच राहून जाते.<br />कित्येकांच्या
         आयुष्यात पहिलं प्रेम हे कधीच पूर्ण होत नाही, अगदी सरासरी काढली तरी ती
@@ -79,10 +80,10 @@
       >
     </section>
     <section class="prologue">
-      <div class="image">
+      <div class="image" data-aos="fade-right">
         <img src="../images/pravasi.jpg" alt="" height="400px" />
       </div>
-      <div class="about">
+      <div class="about" data-aos="fade-left">
         <h2>प्रस्तावना</h2>
         <p>
           आज पोलीस स्टेशनमध्ये पुन्हा जाऊन आलो. सात महिने झाले. अजून हर्षचा
@@ -118,6 +119,7 @@
         <a href=""><i class="fa fa-linkedin-square"></i></a>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
       function toggle() {
         const toggle = document.querySelector(".toggle");
@@ -125,6 +127,11 @@
         toggle.classList.toggle("active");
         banner.classList.toggle("active");
       }
+      AOS.init({
+        offset: 400,
+        duration: 1000,
+        once: true,
+      });
     </script>
   </body>
 </html>

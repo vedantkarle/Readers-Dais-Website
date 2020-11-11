@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/home.css" />
     <title>Readers Dais</title>
   </head>
@@ -19,9 +20,8 @@
     <header class="hero">
       <header class="nav">
         <a href="#" class="logo">Readers Dais</a>
-        <div class="toggle" onclick="toggle()"></div>
       </header>
-      <div class="container spacing">
+      <div class="container spacing" data-aos="zoom-in">
         <h1 class="primary-title">Readers Dais</h1>
         <p>
           “I find television very educating. <br />
@@ -58,7 +58,11 @@
       <section class="our-products" id="books">
         <div class="container">
           <h2 class="section-title">New & Upcoming Books</h2>
-          <article class="product book-red spacing">
+          <article
+            class="product book-red spacing"
+            data-aos="flip-left"
+            data-aos-delay="50"
+          >
             <img
               src="../images/pravasi-logo.jpg"
               alt=""
@@ -77,7 +81,11 @@
             </p>
             <a href="./html/home.html" class="btn">Read More</a>
           </article>
-          <article class="product book-white spacing">
+          <article
+            class="product book-white spacing"
+            data-aos="flip-right"
+            data-aos-delay="100"
+          >
             <img src="../images/man-maze.png" alt="" class="product__image" />
             <h3 class="product__title">मन माझे...</h3>
             <p class="product__description">
@@ -107,7 +115,7 @@
         </p>
       </div>
       <div class="container">
-        <div class="contact-info">
+        <div class="contact-info" data-aos="fade-right">
           <div class="box">
             <div class="icon">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -136,7 +144,7 @@
             </div>
           </div>
         </div>
-        <div class="contact-form">
+        <div class="contact-form" data-aos="fade-left">
           <form
             action="https://submit-form.com/Ba2vJ9x9"
             target="_self"
@@ -181,25 +189,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $(window).scroll(function () {
-          var scroll = $(window).scrollTop();
-          if (scroll > 650) {
-            $(".nav").css("background", "black");
-          } else {
-            $(".nav").css("background", "transparent");
-          }
-        });
-        let name = document.querySelector("#name").value;
-        let email = document.querySelector("#email").value;
-        let message = document.querySelector("#message").value;
-        document.querySelector("#form").addEventListener("submit", function () {
-          name = "";
-          email = "";
-          message = "";
-        });
-      });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
